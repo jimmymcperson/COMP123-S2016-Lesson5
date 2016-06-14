@@ -55,5 +55,33 @@ namespace COMP123_s2016_Lesson5
             this.Face = face;
             this.Suit = suit;
             }
+
+        // PRIVATE METHODS =============================================================================
+
+
+
+
+        // PUBLIC METHODS =============================================================================
+
+        /** <summary>
+        * This method displays the cards in a deck.
+        * </summary>
+        *
+        * @method DisplayDeck
+        * @params {List<Card>} deck
+        * @returns {void}
+        */
+        public static void DisplayDeck(List<Card> deck)
+            {
+            Console.WriteLine("=============================================================================");
+            Console.WriteLine("| Current Deck                                                              |");
+            Console.WriteLine("=============================================================================");
+            foreach (Card card in deck)
+                {
+                Console.WriteLine("{0} of {1}", card.Face, card.Suit);
+                }
+            Console.WriteLine("=============================================================================");
+            Console.WriteLine();
+            }
         }
     }
