@@ -67,7 +67,7 @@ namespace COMP123_s2016_Lesson5
         * This method displays the cards in a deck.
         * </summary>
         *
-        * @method DisplayDeck
+        * @method Display
         * @params {List<Card>} deck
         * @returns {void}
         */
