@@ -25,7 +25,10 @@ namespace COMP123_s2016_Lesson5
             List<Card> Deck = new List<Card>();
 
             CreateDeck(Deck);
-            DisplayDeck(Deck);
+            DisplayDeck(Deck); // display initial state of deck
+
+            ShuffleDeck(Deck);
+            DisplayDeck(Deck); // display shuffled state of deck
             }
 
         /** <summary>
@@ -65,7 +68,7 @@ namespace COMP123_s2016_Lesson5
             }
 
         /** <summary>
-        * This method displays the cards in a deck.
+        * This method displays a list of Card objects to the console.
         * </summary>
         *
         * @method DisplayDeck
@@ -83,6 +86,30 @@ namespace COMP123_s2016_Lesson5
                 }
             Console.WriteLine("=============================================================================");
             Console.WriteLine();
+            }
+
+        /** <summary>
+        * This method randomly shuffles a List of Card objects.
+        * </summary>
+        * 
+        * @method ShuffleDeck
+        * @param {List<Card>} deck
+        * @returns {void}
+        */
+        public static void ShuffleDeck(List<Card> deck)
+            {
+            // creates a pseudo-random number sequence and stores it in random
+            Random random = new Random();
+            // record the number of cards in the deck List
+            int cardCount = deck.Count;
+            // iterate through the list of cards
+            for(int currentCard = 0; currentCard < cardCount; currentCard++)
+                {
+                Card tempCard = deck[currentCard]; // copy current card to temp location
+                int randomCard = random.Next(0, cardCount); // get a random index
+                deck[currentCard] = deck[randomCard]; // copy value from randomCard to currentCard
+                deck[randomCard] = tempCard; // copy current card to random card location
+                }
             }
         }
     }
