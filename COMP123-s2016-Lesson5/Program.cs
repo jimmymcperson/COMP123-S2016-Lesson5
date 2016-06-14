@@ -28,6 +28,8 @@ namespace COMP123_s2016_Lesson5
             deck.Shuffle();
             deck.Display();
 
+            Card cardDealt = deck.Deal();
+            Console.WriteLine("Card dealt is {0} of {1}", cardDealt.Face, cardDealt.Suit);
             }
         }
     }
