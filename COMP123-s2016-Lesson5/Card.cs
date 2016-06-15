@@ -28,17 +28,17 @@ namespace COMP123_s2016_Lesson5
         * This is a property for our _face field.
         * </summary>
         *
-        * @property {string} Face
+        * @property {Faces} Face
         */
-        public int Face { get; set; }
+        public Faces Face { get; set; }
 
         /** <summary>
         * This is a property for our _suit field.
         * </summary>
         *
-        * @property {string} Suit
+        * @property {Suits} Suit
         */
-        public string Suit { get; set; }
+        public Suits Suit { get; set; }
 
         // CONSTRUCTORS =============================================================================
 
@@ -47,10 +47,10 @@ namespace COMP123_s2016_Lesson5
         * </summary>
         *
         * @constructor Card
-        * @param {int} face
-        * @param {string} suit
+        * @param {Faces} face
+        * @param {Suits} suit
         */
-        public Card(int face, string suit)
+        public Card(Faces face, Suits suit)
             {
             this.Face = face;
             this.Suit = suit;
